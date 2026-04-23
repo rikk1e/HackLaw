@@ -1,1 +1,4 @@
 exif
+easyocr
+pdf2image
+requests
