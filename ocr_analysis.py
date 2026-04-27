@@ -1,7 +1,14 @@
-import easyocr
+from docling.document_converter import DocumentConverter
+from docling.datamodel.base_models import InputFormat
+from docling.datamodel.pipeline_options import PdfPipelineOptions
+from pathlib import Path
 
-reader = easyocr.Reader(['en'])
-results = reader.readtext('todo.jpg')
+input_path = Path("assets/ocr_pics/newspaper.jpg")
 
-for (bbox, text, confidence) in results:
-    print(f"Text: {text} (Confidence: {confidence:.2f})")
+converter = DocumentConverter()
+
+result = converter.convert(input_path)
+
+md_output = result.document.export_to_markdown(image_mode="placeholder")
+
+print(md_output)
