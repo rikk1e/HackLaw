@@ -28,7 +28,7 @@ Regex is short for "regular expression", which is basically just a well structur
 
 Using regex, we can search for (not quite) exact matches of text strings. This is useful to account for things like typos, rearranged wordings or finding well formatted information. For example, how would you go about finding all email addresses across 100s of documents? It would be a pain to go through and ctrl-f "@". It would also give us false positives and take an incredibly long time to copy each address into whatever document we have.
 
-We can simply use an email regex to find all emails in a document.
+For this demo, we will be finding the most self-referenced clauses in the APP 1988.
 
 ### Blockchain analysis for money laundering
 
